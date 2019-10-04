@@ -6,7 +6,7 @@
 #
 #   http://127.0.0.3:8700/ui/dc1/services
 #
-curl -s http://127.0.0.3:8700/ui/dc1/services >/dev/null
+curl -s http://127.0.0.3:8700/ui/dc1/services >curl.out
 if [ "$?" "=" "0" ]
 then
   echo "Access permitted as expected"
