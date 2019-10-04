@@ -2,8 +2,8 @@
 # Append a service definition for the Consul UI so we can
 # add a Consul Connect sidecar proxy later on.
 #
-# There is a shortcut way to include a sidecar service
-# but currently Consul requires that the sidecar listen on
+# There is a shortcut way to include a sidecar service but 
+# currently Consul v1.6.1 requires that the sidecar listen on
 # 127.0.0.1 for the default health checks (and ours doesn't).
 #
 # The shortcut syntax looks like this:
