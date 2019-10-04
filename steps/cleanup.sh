@@ -5,7 +5,7 @@ consul leave -http-addr="127.0.0.3:8500" 2>/dev/null
 consul leave -http-addr="127.0.0.2:8500" 2>/dev/null
 
 ANY=NO
-for PID_FILE in "$1/client/proxy.pid" "$1/client/agent.pid" "$1/server/proxy.pid" "$1/server/agent.pid"
+for PID_FILE in "$1"/*/*.pid
 do
   if [ -f "$PID_FILE" ]
   then
