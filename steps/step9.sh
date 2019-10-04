@@ -1,6 +1,6 @@
 #
-# Start the sidecar proxy in the background
+# Start the client agent in the background then wait a few seconds for it to stabilize
 #
-consul connect proxy -sidecar-for ui-backend \
-  -http-addr="127.0.0.2:8500" >server/proxy.log 2>&1 </dev/null &
-echo "$!" >server/proxy.pid
+consul agent -config-dir=client -pid-file=client/agent.pid
+  >client/agent.log 2>&1 </dev/null &
+sleep 5

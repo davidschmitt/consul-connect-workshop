@@ -1,4 +1,5 @@
 #
-# Validate server is running
+# Validate the Consul configuration files
 #
-curl -s http://127.0.0.2:8500/v1/status/leader
+consul validate server/config.hcl &&
+consul validate client/config.hcl
